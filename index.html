@@ -1,20 +1,27 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Login page</title>
+</head>
 <body>
- 
-<h2>Circuits4you<h2>
-<h3> HTML Form ESP8266</h3>
- 
-<form action="/action_page">
-  First name:<br>
-  <input type="text" value="Mickey">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
-  <br><br>
-  <input type="submit" value="Submit">
-</form> 
- 
+<form>
+    <label for="pswd">Enter your password: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "admin";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="welcome.html";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+</script>
 </body>
 </html>
