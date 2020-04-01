@@ -4,7 +4,7 @@
 <title>Login Page</title>
 </head>
 <body>
-<form name="loginForm" method="post" action="login.php">
+<form name="loginForm" method="post" action="welcome.html">
 <table width="20%" bgcolor="0099CC" align="center">
 
 <tr>
@@ -34,7 +34,7 @@ function check(form)
 
 if(form.userid.value == "Roseindia" && form.pwd.value == "Roseindia")
 {	
-	window.open(welcome.html)
+	return true;
 	
 }
 else
